@@ -4,8 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="clr-namespace:MVVM_Template.ViewModel;assembly=ViewModel"
-    xmlns:vw="clr-namespace:MVVM_Template.View"
     x:Name="mainWindow"
     Title="MVVM Light Application Template"
     Width="850"
@@ -21,13 +19,24 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Main">
                 <MenuItem
+                    Command="{Binding ShowDataCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=mainWindow}"
+                    Header="_Show Data" />
+                <Separator />
+                <MenuItem
                     Command="{Binding CloseWindowCommand, Mode=OneWay}"
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_Exit" />
             </MenuItem>
         </Menu>
         <Grid Width="Auto" Height="Auto">
-            <ScrollViewer VerticalScrollBarVisibility="Auto" />
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ContentControl
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="{Binding CurrentContentView}"
+                    IsTabStop="False" />
+            </ScrollViewer>
         </Grid>
     </DockPanel>
 </Window>

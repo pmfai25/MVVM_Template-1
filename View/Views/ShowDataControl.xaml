@@ -1,0 +1,24 @@
+﻿
+<UserControl
+    x:Class="MVVM_Template.View.ShowDataControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:MVVM_Template.ViewModel;assembly=ViewModel"
+    Width="auto"
+    Height="auto"
+    Margin="0,10,0,0"
+    DataContext="{Binding ShowData, Source={StaticResource Locator}}"
+    FontSize="14">
+    <UserControl.Resources />
+    <Grid>
+        <Button
+            Width="70"
+            Height="24"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Test" />
+    </Grid>
+</UserControl>

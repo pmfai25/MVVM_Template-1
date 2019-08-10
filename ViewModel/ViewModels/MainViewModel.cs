@@ -34,13 +34,10 @@ namespace MVVM_Template.ViewModel
             //    // Code runs "for real"
             //}
 
-
-            using (var context = new EntityModel())
-            {
-                var studentList = context.tblUsers.SqlQuery("Select * from tblUser").ToList();
-            }
-
-            this.CurrentContentView = ServiceLocator.Current.GetInstance<TranslateViewModel>();
+            //using (var context = new EntityModel())
+            //{
+            //    var studentList = context.tblUsers.SqlQuery("Select * from tblUser").ToList();
+            //}
         }
 
         private ViewModelBase currentContentView;
@@ -57,19 +54,19 @@ namespace MVVM_Template.ViewModel
             }
         }
         
-        private RelayCommand _translateCommand;
-        public RelayCommand TranslateCommand
+        private RelayCommand _showDataCommand;
+        public RelayCommand ShowDataCommand
         {
             get
             {
-                if (_translateCommand == null)
+                if (_showDataCommand == null)
                 {
-                    _translateCommand = new RelayCommand(() =>
+                    _showDataCommand = new RelayCommand(() =>
                     {
-                        this.CurrentContentView = ServiceLocator.Current.GetInstance<TranslateViewModel>();
+                        this.CurrentContentView = ServiceLocator.Current.GetInstance<ShowDataViewModel>();
                     });
                 }
-                return _translateCommand;
+                return _showDataCommand;
             }
         }
 

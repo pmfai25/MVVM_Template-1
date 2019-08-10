@@ -31,19 +31,19 @@ namespace MVVM_Template.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
+            //if (ViewModelBase.IsInDesignModeStatic)
+            //{
+            //    // Create design time view services and models
+            //    SimpleIoc.Default.Register<IDataService, DesignDataService>();
+            //}
+            //else
+            //{
+            //    // Create run time view services and models
+            //    SimpleIoc.Default.Register<IDataService, DataService>();
+            //}
 
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<TranslateViewModel>();
+            SimpleIoc.Default.Register<ShowDataViewModel>();
         }
 
         public MainViewModel Main
@@ -54,11 +54,11 @@ namespace MVVM_Template.ViewModel
             }
         }
 
-        public TranslateViewModel Translate
+        public ShowDataViewModel ShowData
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<TranslateViewModel>();
+                return ServiceLocator.Current.GetInstance<ShowDataViewModel>();
             }
         }
         
