@@ -13,12 +13,30 @@
     FontSize="14">
     <UserControl.Resources />
     <Grid>
-        <Button
-            Width="70"
-            Height="24"
-            Margin="10,10,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Test" />
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    Width="340"
+                    Height="23"
+                    Margin="5,5,0,5"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Button
+                    Width="55"
+                    Height="23"
+                    Margin="3,5,0,5"
+                    Content="Post" />
+            </StackPanel>
+            <Button
+                Width="70"
+                Height="23"
+                Margin="5,5,5,0"
+                HorizontalAlignment="Left"
+                Content="Clear All" />
+            <DataGrid
+                Width="400"
+                Height="130"
+                Margin="5,3,5,5" />
+        </StackPanel>
     </Grid>
 </UserControl>
