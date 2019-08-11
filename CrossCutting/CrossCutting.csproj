@@ -51,8 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dialogs\DialogMessages.cs" />
-    <Compile Include="Dialogs\Win32\Dialogs.cs" />
-    <Compile Include="Dialogs\Win32\IoDialogs.cs" />
+    <Compile Include="Dialogs\Dialogs.cs" />
+    <Compile Include="Dialogs\IoDialogs.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

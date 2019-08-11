@@ -1,7 +1,6 @@
 using CommonServiceLocator;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
-using MVVM_Template.Model.EntityModel;
 using System.Linq;
 
 namespace MVVM_Template.ViewModel
@@ -53,7 +52,23 @@ namespace MVVM_Template.ViewModel
                 RaisePropertyChanged("CurrentContentView");
             }
         }
-        
+
+        private RelayCommand _aboutCommand;
+        public RelayCommand AboutCommand
+        {
+            get
+            {
+                if (_aboutCommand == null)
+                {
+                    _aboutCommand = new RelayCommand(() =>
+                    {
+                        this.CurrentContentView = ServiceLocator.Current.GetInstance<AboutViewModel>();
+                    });
+                }
+                return _aboutCommand;
+            }
+        }
+
         private RelayCommand _showDataCommand;
         public RelayCommand ShowDataCommand
         {

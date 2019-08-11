@@ -43,6 +43,7 @@ namespace MVVM_Template.ViewModel
             //}
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<AboutViewModel>();
             SimpleIoc.Default.Register<ShowDataViewModel>();
         }
 
@@ -59,6 +60,14 @@ namespace MVVM_Template.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<ShowDataViewModel>();
+            }
+        }
+
+        public AboutViewModel About
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AboutViewModel>();
             }
         }
         

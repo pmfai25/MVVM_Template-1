@@ -6,6 +6,9 @@
     xmlns:vw="clr-namespace:MVVM_Template.View">
 
     <!--  These templates apply Controls to an instance of their respective ViewModel class shown in the main window.  -->
+    <DataTemplate DataType="{x:Type vm:AboutViewModel}">
+        <vw:AboutControl />
+    </DataTemplate>
     <DataTemplate DataType="{x:Type vm:ShowDataViewModel}">
         <vw:ShowDataControl />
     </DataTemplate>

@@ -22,6 +22,10 @@
                     Command="{Binding ShowDataCommand, Mode=OneWay}"
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_Show Data" />
+                <MenuItem
+                    Command="{Binding AboutCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=mainWindow}"
+                    Header="_About" />
                 <Separator />
                 <MenuItem
                     Command="{Binding CloseWindowCommand, Mode=OneWay}"
