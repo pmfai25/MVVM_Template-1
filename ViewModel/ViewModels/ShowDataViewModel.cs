@@ -1,4 +1,6 @@
 using GalaSoft.MvvmLight;
+using MVVM_Template.Model;
+using System.Collections.ObjectModel;
 
 namespace MVVM_Template.ViewModel
 {
@@ -21,7 +23,21 @@ namespace MVVM_Template.ViewModel
         /// </summary>
         public ShowDataViewModel()
         {
-            
+            this.dataCollection = new DataService().GetData();
+        }
+
+        private ObservableCollection<DataItem> dataCollection;
+        public ObservableCollection<DataItem> DataCollection
+        {
+            get
+            {
+                return dataCollection;
+            }
+            set
+            {
+                dataCollection = value;
+                RaisePropertyChanged("DataCollection");
+            }
         }
     }
 }

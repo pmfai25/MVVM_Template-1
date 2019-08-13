@@ -11,11 +11,20 @@
     FontSize="14">
     <UserControl.Resources />
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
         <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
             Margin="10,10,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="This is the About Control"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="36"
+            Text="{Binding AboutTitle}"
             TextWrapping="Wrap" />
     </Grid>
 </UserControl>

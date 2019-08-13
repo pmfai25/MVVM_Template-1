@@ -5,8 +5,8 @@ using System.Text;
 
 namespace MVVM_Template.Model
 {
-    public interface IDataService
+    public interface IMainService
     {
-        void GetData(Action<DataItem, Exception> callback);
+        void GetData(Action<MainItem, Exception> callback);
     }
 }

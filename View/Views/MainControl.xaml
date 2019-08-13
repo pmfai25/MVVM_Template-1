@@ -10,12 +10,13 @@
     FontSize="14">
     <UserControl.Resources />
     <Grid>
-        <TextBlock FontSize="36"
-                   FontWeight="Bold"
-                   Foreground="Purple"
-                   Text="{Binding WelcomeTitle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   TextWrapping="Wrap" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="36"
+            FontWeight="Bold"
+            Foreground="Purple"
+            Text="{Binding WelcomeTitle}"
+            TextWrapping="Wrap" />
     </Grid>
 </UserControl>

@@ -8,12 +8,12 @@ namespace MVVM_Template.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IDataService _dataService;
+        private readonly IMainService _dataService;
         
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel(IDataService dataService)
+        public MainViewModel(IMainService dataService)
         {
             _dataService = dataService;
             _dataService.GetData(

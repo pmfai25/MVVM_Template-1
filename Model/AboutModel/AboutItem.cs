@@ -1,6 +1,6 @@
 ﻿namespace MVVM_Template.Model
 {
-    public class DataItem
+    public class AboutItem
     {
         public string Title
         {
@@ -8,7 +8,7 @@
             private set;
         }
 
-        public DataItem(string title)
+        public AboutItem(string title)
         {
             Title = title;
         }

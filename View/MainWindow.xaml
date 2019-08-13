@@ -6,8 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="mainWindow"
     Title="MVVM Light Application Template"
-    Width="850"
-    Height="600"
+    Width="600"
+    Height="400"
     DataContext="{Binding Main, Source={StaticResource Locator}}"
     ResizeMode="CanResizeWithGrip"
     WindowStartupLocation="CenterScreen"
@@ -15,7 +15,7 @@
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml" />
     </Window.Resources>
-    <DockPanel>
+    <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Main">
                 <MenuItem
@@ -28,17 +28,21 @@
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_Exit" />
             </MenuItem>
-            <MenuItem
+            <MenuItem Header="_Help">
+                <MenuItem
                     Command="{Binding AboutCommand, Mode=OneWay}"
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_About" />
-            <Separator />
+            </MenuItem>
         </Menu>
-        <Grid Width="Auto" Height="Auto">            
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid
+            Width="Auto"
+            Height="Auto"
+            VerticalAlignment="Stretch">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                 <ContentControl
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
                     Content="{Binding CurrentContentView}"
                     IsTabStop="False" />
             </ScrollViewer>

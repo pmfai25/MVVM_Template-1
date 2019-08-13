@@ -66,9 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataItem.cs" />
-    <Compile Include="DataService.cs" />
-    <Compile Include="IDataService.cs" />
+    <Compile Include="AboutModel\AboutItem.cs" />
+    <Compile Include="DataModel\DataItem.cs" />
+    <Compile Include="DataModel\DataService.cs" />
+    <Compile Include="MainModel\MainItem.cs" />
+    <Compile Include="MainModel\MainService.cs" />
+    <Compile Include="MainModel\IMainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using MVVM_Template.Model;
 
 namespace MVVM_Template.ViewModel
 {
@@ -21,7 +22,21 @@ namespace MVVM_Template.ViewModel
         /// </summary>
         public AboutViewModel()
         {
-            
+            this.aboutTitle = new AboutItem("This is the About component.").Title;
+        }
+
+        private string aboutTitle;
+        public string AboutTitle
+        {
+            get
+            {
+                return aboutTitle;
+            }
+            set
+            {
+                aboutTitle = value;
+                RaisePropertyChanged("AboutTitle");
+            }
         }
     }
 }

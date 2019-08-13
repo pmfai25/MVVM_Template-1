@@ -40,7 +40,7 @@ namespace MVVM_Template.ViewModel
             else
             {
                 // Create run time view services and models
-                SimpleIoc.Default.Register<IDataService, DataService>();
+                SimpleIoc.Default.Register<IMainService, MainService>();
             }
 
             SimpleIoc.Default.Register<MainViewModel>();
