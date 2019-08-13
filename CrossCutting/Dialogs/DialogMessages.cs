@@ -23,7 +23,7 @@
                                                                      "Are you absolutely sure you want to do this?";
 
         public static readonly string TruncateWarningMessage = "You are about to truncate/purge database tables!\n\n" +
-                                                             "Are you absolutely sure you want to do this?";
+                                                             "Are you sure you want to do this?";
 
         #endregion
     }
