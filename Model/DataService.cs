@@ -6,7 +6,7 @@ namespace MVVM_Template.Model
     {
         public void GetData(Action<DataItem, Exception> callback)
         {
-            var item = new DataItem("Welcome to MVVM Light");
+            var item = new DataItem("This is a MVVM Light Template!");
             callback(item, null);
         }
     }

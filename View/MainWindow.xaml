@@ -22,18 +22,19 @@
                     Command="{Binding ShowDataCommand, Mode=OneWay}"
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_Show Data" />
-                <MenuItem
-                    Command="{Binding AboutCommand, Mode=OneWay}"
-                    CommandParameter="{Binding ElementName=mainWindow}"
-                    Header="_About" />
                 <Separator />
                 <MenuItem
                     Command="{Binding CloseWindowCommand, Mode=OneWay}"
                     CommandParameter="{Binding ElementName=mainWindow}"
                     Header="_Exit" />
             </MenuItem>
+            <MenuItem
+                    Command="{Binding AboutCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=mainWindow}"
+                    Header="_About" />
+            <Separator />
         </Menu>
-        <Grid Width="Auto" Height="Auto">
+        <Grid Width="Auto" Height="Auto">            
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <ContentControl
                     HorizontalAlignment="Center"

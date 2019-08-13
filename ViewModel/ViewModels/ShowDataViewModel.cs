@@ -21,14 +21,7 @@ namespace MVVM_Template.ViewModel
         /// </summary>
         public ShowDataViewModel()
         {
-            //if (IsInDesignMode)
-            //{
-            //    // Code runs in Blend --> create design time data.
-            //}
-            //else
-            //{
-            //    // Code runs "for real"
-            //}
+            
         }
     }
 }

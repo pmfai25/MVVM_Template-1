@@ -7,7 +7,7 @@
     Width="auto"
     Height="auto"
     Margin="0,10,0,0"
-    DataContext="{Binding ShowData, Source={StaticResource Locator}}"
+    DataContext="{Binding About, Source={StaticResource Locator}}"
     FontSize="14">
     <UserControl.Resources />
     <Grid>

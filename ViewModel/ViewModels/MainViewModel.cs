@@ -1,42 +1,42 @@
 using CommonServiceLocator;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
+using MVVM_Template.Model;
 using System.Linq;
 
 namespace MVVM_Template.ViewModel
 {
-    /// <summary>
-    /// This class contains properties that the main View can data bind to.
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
-    /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private readonly IDataService _dataService;
+        
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
+        public MainViewModel(IDataService dataService)
         {
-            //if (IsInDesignMode)
-            //{
-            //    // Code runs in Blend --> create design time data.
-            //}
-            //else
-            //{
-            //    // Code runs "for real"
-            //}
+            _dataService = dataService;
+            _dataService.GetData(
+                (item, error) =>
+                {
+                    WelcomeTitle = item.Title;
+                });
 
-            //using (var context = new EntityModel())
-            //{
-            //    var studentList = context.tblUsers.SqlQuery("Select * from tblUser").ToList();
-            //}
+           this.CurrentContentView = this;
+        }
+
+        private string _welcomeTitle;
+        public string WelcomeTitle
+        {
+            get
+            {
+                return _welcomeTitle;
+            }
+            set
+            {
+                _welcomeTitle = value;
+                RaisePropertyChanged("WelcomeTitle");
+            }
         }
 
         private ViewModelBase currentContentView;
