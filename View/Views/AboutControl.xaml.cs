@@ -1,7 +1,7 @@
-﻿using System.Windows.Controls;
-
-namespace MVVM_Template.View
+﻿namespace MVVM_Template.View
 {
+    using System.Windows.Controls;
+
     /// <summary>
     /// Interaction logic for AboutControl.xaml
     /// </summary>

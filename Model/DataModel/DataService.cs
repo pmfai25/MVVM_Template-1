@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.ObjectModel;
-
-namespace MVVM_Template.Model
+﻿namespace MVVM_Template.Model
 {
+    using System;
+    using System.Collections.ObjectModel;
+
+    /// <summary>
+    /// DataService for DataItem model
+    /// </summary>
     public class DataService
     {
+        /// <summary>
+        /// Get the DataItem data collection
+        /// </summary>
+        /// <returns>DataItem collection</returns>
         public ObservableCollection<DataItem> GetData()
         {
             return new ObservableCollection<DataItem>()

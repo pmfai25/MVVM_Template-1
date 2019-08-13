@@ -3,7 +3,6 @@
     x:Class="MVVM_Template.View.MainControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vm="clr-namespace:MVVM_Template.ViewModel;assembly=ViewModel"
     Width="auto"
     Height="auto"
     DataContext="{Binding Main, Source={StaticResource Locator}}"

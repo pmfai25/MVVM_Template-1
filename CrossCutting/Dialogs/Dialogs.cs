@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace MVVM_Template.CrossCutting
+﻿namespace MVVM_Template.CrossCutting
 {
+    using System;
+    using System.Windows.Forms;
+
     /// <summary>
     /// Handles all generic Dialog boxes for the application.
     /// </summary>

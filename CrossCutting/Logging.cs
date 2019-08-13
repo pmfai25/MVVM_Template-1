@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace MVVM_Template.CrossCutting
+﻿namespace MVVM_Template.CrossCutting
 {
+    using System;
+
     /// <summary>
     /// Logging management and settings (log4net)
     /// </summary>
@@ -9,10 +9,7 @@ namespace MVVM_Template.CrossCutting
     {
         //set the logger
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
-        static Logging()
-        {   }
-
+        
         /// <summary>
         /// Configure log4net for application
         /// </summary>

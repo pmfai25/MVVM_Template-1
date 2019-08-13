@@ -1,9 +1,9 @@
-﻿using System.Windows.Controls;
-
-namespace MVVM_Template.View
+﻿namespace MVVM_Template.View
 {
+    using System.Windows.Controls;
+
     /// <summary>
-    /// Interaction logic for AboutControl.xaml
+    /// Interaction logic for ShowDataControl.xaml
     /// </summary>
     public partial class ShowDataControl : UserControl
     {

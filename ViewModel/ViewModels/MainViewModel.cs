@@ -1,21 +1,28 @@
-using CommonServiceLocator;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.CommandWpf;
-using MVVM_Template.Model;
-using System.Linq;
-
 namespace MVVM_Template.ViewModel
 {
+    using CommonServiceLocator;
+    using GalaSoft.MvvmLight;
+    using GalaSoft.MvvmLight.CommandWpf;
+    using MVVM_Template.Model;
+
+    /// <summary>
+    /// MainViewModel Object
+    /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        //set _dataService property to interface
         private readonly IMainService _dataService;
         
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
+        /// Notice we are doing dependency injection with this one.
+        /// If we wanted to write unit tests for this, we would inject a fake/mock DataService in here.
         /// </summary>
         public MainViewModel(IMainService dataService)
         {
             _dataService = dataService;
+
+            //go get the data
             _dataService.GetData(
                 (item, error) =>
                 {
@@ -25,6 +32,7 @@ namespace MVVM_Template.ViewModel
            this.CurrentContentView = this;
         }
 
+        //WelcomeTitle property
         private string _welcomeTitle;
         public string WelcomeTitle
         {
@@ -39,6 +47,7 @@ namespace MVVM_Template.ViewModel
             }
         }
 
+        //ContentView ViewModel holder
         private ViewModelBase currentContentView;
         public ViewModelBase CurrentContentView
         {
@@ -53,6 +62,7 @@ namespace MVVM_Template.ViewModel
             }
         }
 
+        //About Command instance
         private RelayCommand _aboutCommand;
         public RelayCommand AboutCommand
         {
@@ -69,6 +79,7 @@ namespace MVVM_Template.ViewModel
             }
         }
 
+        //ShowData Command instance
         private RelayCommand _showDataCommand;
         public RelayCommand ShowDataCommand
         {
@@ -85,6 +96,7 @@ namespace MVVM_Template.ViewModel
             }
         }
 
+        //CloseWindow Command instance (notice IClosable data type)
         private RelayCommand<IClosable> _closeWindowCommand;
         public RelayCommand<IClosable> CloseWindowCommand
         {

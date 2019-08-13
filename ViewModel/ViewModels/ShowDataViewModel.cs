@@ -1,20 +1,11 @@
-using GalaSoft.MvvmLight;
-using MVVM_Template.Model;
-using System.Collections.ObjectModel;
-
 namespace MVVM_Template.ViewModel
 {
+    using GalaSoft.MvvmLight;
+    using MVVM_Template.Model;
+    using System.Collections.ObjectModel;
+    
     /// <summary>
-    /// This class contains properties that the main View can data bind to.
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
+    /// ShowDataViewModel Object
     /// </summary>
     public class ShowDataViewModel : ViewModelBase
     {
@@ -23,9 +14,11 @@ namespace MVVM_Template.ViewModel
         /// </summary>
         public ShowDataViewModel()
         {
+            //go get and set the data collection
             this.dataCollection = new DataService().GetData();
         }
 
+        //Data collection property
         private ObservableCollection<DataItem> dataCollection;
         public ObservableCollection<DataItem> DataCollection
         {

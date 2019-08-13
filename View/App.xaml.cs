@@ -1,9 +1,9 @@
-﻿using GalaSoft.MvvmLight.Threading;
-using MVVM_Template.CrossCutting;
-using System.Windows;
-
-namespace MVVM_Template.View
+﻿namespace MVVM_Template.View
 {
+    using GalaSoft.MvvmLight.Threading;
+    using MVVM_Template.CrossCutting;
+    using System.Windows;
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
@@ -14,10 +14,12 @@ namespace MVVM_Template.View
 
         static App()
         {
+            //configure logging (only set once)
             Logging.ConfigureLog4Net();
 
             DispatcherHelper.Initialize();
 
+            //log some info
             log.Info("App Initialized");
         }
     }

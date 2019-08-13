@@ -1,7 +1,10 @@
-﻿using System;
-
-namespace MVVM_Template.Model
+﻿namespace MVVM_Template.Model
 {
+    using System;
+
+    /// <summary>
+    /// DataItem model
+    /// </summary>
     public class DataItem
     {
         public DataItem()

@@ -16,15 +16,10 @@
     /// </summary>
     public static class DialogMessages
     {
-
-        #region Dialog Box Messages
-
         public static readonly string DeleteWarningMessage = "You are about to delete an entire object! This is recursive and deletes everything associated with this object!\n\n" +
                                                                      "Are you absolutely sure you want to do this?";
 
         public static readonly string TruncateWarningMessage = "You are about to truncate/purge database tables!\n\n" +
                                                              "Are you sure you want to do this?";
-
-        #endregion
     }
 }

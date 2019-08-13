@@ -17,10 +17,6 @@
     </DataTemplate>
 
     <!--  Here's where we can set styles and themes for the entire application.  -->
-    <!--  x:Key="{x:Type ToolTip}" <Setter Property = "Foreground" Value="Navy" />
-
-    DataType="{x:Type vm:ShowDataViewModel}"
-
-    -->
+    <!--  x:Key="{x:Type ToolTip}" <Setter Property = "Foreground" Value="Navy" /> -->
 
 </ResourceDictionary>
